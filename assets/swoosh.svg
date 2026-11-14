@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" fill="none" preserveAspectRatio="xMaxYMin slice">
+<defs>
+<linearGradient id="a" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1f6bff" stop-opacity="0"/><stop offset=".55" stop-color="#2f7bff" stop-opacity=".85"/><stop offset="1" stop-color="#7fb0ff" stop-opacity=".25"/></linearGradient>
+<filter id="b" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.2"/></filter>
+<filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<path d="M120 470C330 380 520 250 690 130 760 80 830 45 900 30" stroke="#1f6bff" stroke-opacity=".5" stroke-width="46" filter="url(#g)"/>
+<g stroke="url(#a)" stroke-width="1.3" filter="url(#b)">
+<path d="M130 470C340 385 520 255 690 138 760 90 830 56 900 42"/>
+<path d="M140 470C350 392 530 262 700 148 770 102 835 68 900 56"/>
+<path d="M150 470C360 398 540 270 705 160 775 114 840 82 900 70"/>
+<path d="M160 470C372 405 550 280 712 172 780 128 845 96 900 85"/>
+<path d="M175 470C385 412 560 292 720 186 785 144 850 112 900 101"/>
+<path d="M195 470C400 420 572 305 728 200 792 160 855 128 900 118"/>
+<path d="M215 470C415 428 585 318 738 215 798 178 858 146 900 136"/>
+</g>
+</svg>
