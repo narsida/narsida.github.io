@@ -74,8 +74,8 @@
       }
       const btn = form.querySelector('button[type=submit]'); btn.disabled = true; btn.firstChild.textContent = 'Skickar... ';
       try {
-        const res = await fetch(cfg.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) });
-        if (!res.ok) throw new Error('http ' + res.status);
+        const res = await fetch(cfg.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(Object.assign({ access_key: cfg.formAccessKey, subject: 'Ny förfrågan från närsida.se', from_name: 'Närsida', name: data.kontaktperson, email: data.epost, message: data.meddelande }, data)) });
+        const j = await res.json().catch(() => ({})); if (!res.ok || j.success === false) throw new Error('http ' + res.status);
         root.innerHTML = `<div class="cf-ok" role="status"><h2>Tack för din förfrågan.</h2><p>Vi har tagit emot ditt meddelande och återkommer så snart vi kan.</p><a class="btn btn-ghost" href="/">Till startsidan</a></div>`;
         root.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } catch (err) {
